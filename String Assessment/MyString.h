@@ -8,7 +8,7 @@ private:
 public:
 
 	MyString(); //Default Constructor
-	MyString(char[]);
+	MyString(char str[]);
 
 	int StringSize();//Gets the length of the string
 	bool StringCompare(); //Compares two string to see if they are the same
