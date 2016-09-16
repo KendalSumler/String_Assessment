@@ -10,7 +10,7 @@ int main()
 	//Part 1
 	MyString myString = MyString("The Default String");
 
-
+	MyString myString = MyString();
 	//Part 2
 
 
