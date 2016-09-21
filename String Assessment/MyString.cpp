@@ -1,14 +1,15 @@
 #include <iostream>
 #include "MyString.h"
 
-MyString::MyString(char str[])
+MyString::MyString(char *charptr)
 {
-	for (int i = 0; i < 255; i++)
+	int i;
+	for (i =0; charptr[i] != '\0'; i++)
 	{
-		if (m_string[i] == 0)
-		{
-			break;
-		}
+		m_string[i] = charptr[i];
+
 	}
-	std::cout<<m_string[2];
+	m_string[i] = '\0'; //Identifying the null character
+	m_length = i;
+	std::cout << i;	
 }
