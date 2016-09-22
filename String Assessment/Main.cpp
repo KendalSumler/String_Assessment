@@ -7,12 +7,12 @@
 
 int main()
 {
-	//Part 1
+	//String Copy 
 	MyString myString = MyString("The Default String");
 
-	MyString myString = MyString();
-	//Part 2
 
+	//String Length
+	
 
 	//Part 3
 	system("pause");
