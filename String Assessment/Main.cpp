@@ -9,7 +9,6 @@ int main()
 {
 	//String Starting Word
 	MyString myString = MyString("The Default String");
-	std::cout << myString.CString();
 
 	//String Length
 	
