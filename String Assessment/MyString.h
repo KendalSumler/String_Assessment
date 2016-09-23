@@ -1,15 +1,17 @@
 #pragma once
 
-class MyString
-{
+class MyString{
 private:
 	char m_data[255];
 public:
-	//(); //Default Constructor
-	MyString(char *newstring);
-	const char *CString();
+	//Mystring(); //Default Constructor
+	MyString(char newstring[]);
+	const char * CString();
+	//const char *CString();
+	/*char OGinput();
+	char AFinput();*/
 	//bool Compare(); //Compares two string to see if they are the same
-	int StringLen(char *charptr);//Function for finding the length of a string 
+	int StringLen();//Function for finding the length of a string 
 	int StringCopy();//Fucntion needed to copy a string to another array
 	int ToAppend();//Function needed to attach one string to the end of another
 	//int ToPrepend();//Function needed to attach one string to the begininng of another
