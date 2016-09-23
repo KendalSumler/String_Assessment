@@ -15,11 +15,5 @@ int main()
 	std::cout << myString.StringLen()<<"\n";
 	//Part 3
 	system("pause");
-	const char * cptr;
-	char letter = 's';
-	cptr = &letter;
-	char bigstring[] = { "hello kendall you a thing" };
-	cptr = &bigstring[0];
-
 	return 0;
 }

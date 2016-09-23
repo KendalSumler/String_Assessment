@@ -13,10 +13,6 @@ MyString::MyString(char  newstring[])
 const char * MyString::CString()
 {
 	return m_data;
-	/*int i = 0;
-	for(i; m_data[i] != '\0';i++)
-
-		return m_data;*/
 }
 
 int MyString::StringLen()
@@ -37,17 +33,17 @@ int MyString::StringLen()
 int MyString::StringCopy()//Copy the contents of one array into the memory space of another
 {
 
-	/*	char *charptr;
+		char *charptr;
 		int i;
 		for (i = 0; charptr[i] != '\0'; i++);
 		m_data[i] = charptr[i];
 
-	*/
+	
 	return 0;
 }
 
 int MyString::ToAppend()//To attach two character strings together
 {
-
+	
 	return 0;
 }
