@@ -8,12 +8,15 @@
 int main()
 {
 	//String Starting Word
-	MyString myString = MyString("The Default String");
+	MyString myString = MyString("Kenny");
 	std::cout << myString.CString()<<"\n";
 	
 	//String Length
 	std::cout << myString.StringLen()<<"\n";
-	//Part 3
+	//String Coppy
+	std::cout << myString.StringCopy() << "\n";
+	//String Append
+	std::cout << myString.ToAppend()<< "\n";
 	system("pause");
 	return 0;
 }
