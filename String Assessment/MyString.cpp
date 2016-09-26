@@ -42,8 +42,11 @@ int MyString::StringCopy()//Copy the contents of one array into the memory space
 	return 0;
 }
 
-int MyString::ToAppend()//To attach two character strings together
-{
+int MyString::ToAppend(MyString s)//To attach two character strings together
+{	
+	char *temp = new char[s.StringLen() + StringLen()];
 	
-	return 0;
+	int x = 0;
+	for (x;m_data[x] != '\0';x++)
+	return x;
 }

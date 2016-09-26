@@ -16,7 +16,7 @@ int main()
 	//String Coppy
 	std::cout << myString.StringCopy() << "\n";
 	//String Append
-	std::cout << myString.ToAppend()<< "\n";
+	std::cout << myString.ToAppend(MyString s)<< "\n";
 	system("pause");
 	return 0;
 }
