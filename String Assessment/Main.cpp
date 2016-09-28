@@ -8,12 +8,14 @@
 int main()
 {
 	//String Starting Word
-	MyString myString = MyString("The Default String");
-	std::cout << myString.CString()<<"\n";
-	
+	MyString FirstString = MyString("Dragon Ball");
+	MyString SecondString = MyString("Naruto");
+	std::cout << FirstString.CString()<<"\n";
+	FirstString.Compare(SecondString);
 	//String Length
-	std::cout << myString.StringLen()<<"\n";
-	//Part 3
+	std::cout << FirstString.StringLen()<<"\n";
+	//String Copy
+	std::cout << FirstString.StringCopy() << "\n";
 	system("pause");
 	return 0;
 }
