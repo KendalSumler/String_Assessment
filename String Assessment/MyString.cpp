@@ -13,7 +13,6 @@ MyString::MyString(char newstring[])
 	m_data[m_Size] = '\0';
 }
 
-
 const char * MyString::CString()
 {
 	return this->m_data;
@@ -47,8 +46,9 @@ bool MyString::Compare(MyString fu)
 	return false;
 }
 
-char MyString::ToAppend(MyString su)
-{
+char *MyString::ToAppend(MyString su)
+{ 
+
 	int FirstLength = m_Size;
 	int i;
 	for (i = 0; i < su.m_data[i] != '\0'; i++)
@@ -56,29 +56,33 @@ char MyString::ToAppend(MyString su)
 		m_data[i + FirstLength] = su.m_data[i];
 	}
 	m_data[i + FirstLength] = '\0';
-	FirstLength = i + m_Size;
-	return ;
+	return m_data;
 }
 
-char MyString::ToPrepend()
-{
+char *MyString::ToPrepend(MyString fu)
+{	char *Dummy = new char [m_Size + fu.m_Size];
+	int SecondLength = fu.m_Size;
+	int x;
+	for (x = 0; x <= fu.m_data[x] ; x++)
+	{
+		fu.m_data[x + SecondLength] = m_data[x];
+	}
+	fu.m_data[x + SecondLength] = '\0';
 	
-
-	return 0;
+	return fu.m_data;
 }
 
-<<<<<<< HEAD
+
+
+
 int MyString::ToUpper(int up)
 {
+	int i;
 
 	return 0;
-=======
-int MyString::ToAppend(MyString s)//To attach two character strings together
-{	
-	char *temp = new char[s.StringLen() + StringLen()];
-	
-	int x = 0;
-	for (x;m_data[x] != '\0';x++)
-	return x;
->>>>>>> origin/master
+}
+
+int MyString::ToLower(int low)
+{
+	return 0;
 }
