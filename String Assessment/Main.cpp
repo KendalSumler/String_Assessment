@@ -8,14 +8,20 @@
 int main()
 {
 	//String Starting Word
-	MyString FirstString = MyString("Dragon Ball");
-	MyString SecondString = MyString("Naruto");
+	MyString FirstString = MyString("Seven");
+	MyString SecondString = MyString("Eighty");
 	std::cout << FirstString.CString()<<"\n";
-	FirstString.Compare(SecondString);
+	std::cout << SecondString.CString() << "\n";
+	
 	//String Length
 	std::cout << FirstString.StringLen()<<"\n";
-	//String Copy
-	std::cout << FirstString.StringCopy() << "\n";
+	std::cout << SecondString.StringLen() << "\n";
+	//String Compare
+	std::cout << FirstString.Compare(SecondString) << "\n";
+	//String Access
+	std::cout << FirstString.SubString(2) << "\n";
+	//String Append
+	std::cout << FirstString.ToAppend(SecondString) << "\n";
 	system("pause");
 	return 0;
 }

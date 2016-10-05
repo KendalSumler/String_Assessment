@@ -1,62 +1,74 @@
 #include <iostream>
 #include "MyString.h"
 
-MyString::MyString(char *newstring)
-{
-	
-	int i;
-	for (i = 0; newstring[i] != '\0'; i++)
-		m_data[i] = newstring[i];
-	m_data[i] = '\0';
+MyString::MyString() {};
+MyString::MyString(char newstring[])
+{ 		
+	m_Size = 0;
+	while (newstring[m_Size] != '\0')
+	{
+		this->m_data[m_Size] = newstring[m_Size];
+		m_Size++;
+	}
+	m_data[m_Size] = '\0';
 }
+
 
 const char * MyString::CString()
 {
-	return m_data;
+	return this->m_data;
 }
 
 int MyString::StringLen()
 {
-	char * charptr = &m_data[0];
-	int i = 0;
-	for (; charptr[i] != '\0'; )
-	{
-		i++;
-	}
+	return this->m_Size;
+}
+char MyString::SubString(char D)
+{
 
-	return i;
+	return m_data[D];
 }
 bool MyString::Compare(MyString fu)
 {
+	bool on = true;
 	int i = 0;
-	for (i; m_data != '\0';)
+	for (i;; i++)
 	{
-		if (m_data == fu.m_data)
+		on = (m_data[i] == fu.m_data[i]) ? true : false;
+		if (on == false)
 		{
-			return true;
+			break;
 		}
-		else
+		if (on == true)
 		{
-			i++;
+			break;
 		}
-		
 	}
+	return false;
 }
-int MyString::StringCopy()//Copy the contents of one array into the memory space of another
+
+char MyString::ToAppend(MyString su)
 {
+	int FirstLength = m_Size;
+	int i;
+	for (i = 0; i < su.m_data[i] != '\0'; i++)
+	{
+		m_data[i + FirstLength] = su.m_data[i];
+	}
+	m_data[i + FirstLength] = '\0';
+	FirstLength = i + m_Size;
+	return ;
+}
 
-		char charptr[255] = "";
-		int i;
-		for (i = 0; charptr[i] != '\0'; i++);
-		m_data[i] = charptr[i];
-
+char MyString::ToPrepend()
+{
 	
-	std::cout << charptr[i];
+
 	return 0;
 }
 
-int MyString::ToAppend()//To attach two character strings together
+int MyString::ToUpper(int up)
 {
-	
+
 	return 0;
 }
