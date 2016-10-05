@@ -8,6 +8,7 @@
 int main()
 {
 	//String Starting Word
+<<<<<<< HEAD
 	MyString FirstString = MyString("Seven");
 	MyString SecondString = MyString("Eighty");
 	std::cout << FirstString.CString()<<"\n";
@@ -22,6 +23,17 @@ int main()
 	std::cout << FirstString.SubString(2) << "\n";
 	//String Append
 	std::cout << FirstString.ToAppend(SecondString) << "\n";
+=======
+	MyString myString = MyString("Kenny");
+	std::cout << myString.CString()<<"\n";
+	
+	//String Length
+	std::cout << myString.StringLen()<<"\n";
+	//String Coppy
+	std::cout << myString.StringCopy() << "\n";
+	//String Append
+	std::cout << myString.ToAppend(MyString s)<< "\n";
+>>>>>>> origin/master
 	system("pause");
 	return 0;
 }

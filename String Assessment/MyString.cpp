@@ -67,8 +67,18 @@ char MyString::ToPrepend()
 	return 0;
 }
 
+<<<<<<< HEAD
 int MyString::ToUpper(int up)
 {
 
 	return 0;
+=======
+int MyString::ToAppend(MyString s)//To attach two character strings together
+{	
+	char *temp = new char[s.StringLen() + StringLen()];
+	
+	int x = 0;
+	for (x;m_data[x] != '\0';x++)
+	return x;
+>>>>>>> origin/master
 }
