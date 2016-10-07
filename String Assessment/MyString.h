@@ -18,11 +18,11 @@ public:
 
 	int StringLen();//Function for finding the length of a string 
 	
-	char *ToAppend(MyString su);//Function needed to attach one string to the end of another
+	char* ToAppend(MyString su);//Function needed to attach one string to the end of another
 	
-	char *ToPrepend(MyString fu);//Function needed to attach one string to the begininng of another
+	char* ToPrepend(MyString fu);//Function needed to attach one string to the begininng of another
 	
-	int ToUpper(int up);//Function needed to copy a string and make them all uppercase
+	MyString ToUpper();//Function needed to copy a string and make them all uppercase
 	
-	int ToLower(int low);/*Function to copy a string and make them all uppercase*/
+	MyString ToLower();/*Function to copy a string and make them all uppercase*/
 };

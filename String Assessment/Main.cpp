@@ -20,11 +20,16 @@ int main()
 	//String Compare
 	 std::cout << FirstString.Compare(SecondString) << "\n";
 	//String Access
-	std::cout << FirstString.SubString(5) << "\n";
+	std::cout << FirstString.SubString(3) << "\n";
 	//String Append
 	std::cout << FirstString.ToAppend(SecondString) << "\n";
 	//String Prepend
+	printf("prepend start... \n");
 	std::cout << FirstString.ToPrepend(SecondString) << "\n";
+	//String Lowercase
+	std::cout << SecondString.ToLower().CString() << "\n";
+	//String Uppercase
+	std::cout << SecondString.ToUpper().CString() << "\n";
 	system("pause");
 	return 0;
 }

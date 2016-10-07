@@ -2,7 +2,7 @@
 #include "MyString.h"
 
 MyString::MyString() {};
-MyString::MyString(char newstring[])
+MyString::MyString(char newstring[])//
 { 		
 	m_Size = 0;
 	while (newstring[m_Size] != '\0')
@@ -31,7 +31,7 @@ bool MyString::Compare(MyString fu)
 {
 	bool on = true;
 	int i = 0;
-	for (i;; i++)
+	for (i;; i++)//loop that itterates through the index of each instance of the array
 	{
 		on = (m_data[i] == fu.m_data[i]) ? true : false;
 		if (on == false)
@@ -49,7 +49,7 @@ bool MyString::Compare(MyString fu)
 char *MyString::ToAppend(MyString su)
 { 
 
-	int FirstLength = m_Size;
+	int FirstLength = m_Size;          
 	int i;
 	for (i = 0; i < su.m_data[i] != '\0'; i++)
 	{
@@ -59,30 +59,61 @@ char *MyString::ToAppend(MyString su)
 	return m_data;
 }
 
-char *MyString::ToPrepend(MyString fu)
-{	char *Dummy = new char [m_Size + fu.m_Size];
-	int SecondLength = fu.m_Size;
-	int x;
-	for (x = 0; x <= fu.m_data[x] ; x++)
-	{
-		fu.m_data[x + SecondLength] = m_data[x];
-	}
-	fu.m_data[x + SecondLength] = '\0';
+char* MyString::ToPrepend(MyString fu)
+{
+
+	int firstSize = fu.m_Size;
+	int secondSize = this->m_Size;
+	int totalSize = firstSize + secondSize;
+	char *Dummy = new char[totalSize];
 	
-	return fu.m_data;
+	int x;
+	for (x = 0; x < firstSize; x++)
+	{
+		Dummy[x] = fu.m_data[x];
+	}
+	for (; x < totalSize; x++)
+	{
+		int offset = x - firstSize;
+		Dummy[x] = m_data[offset];
+		//fu.m_data[x + SecondLength] = this->m_data[x];
+	}
+	Dummy[x] = '\0';
+	
+	return Dummy;
 }
 
 
 
 
-int MyString::ToUpper(int up)
+MyString MyString::ToUpper()
 {
-	int i;
-
-	return 0;
+	
+	int i = 0;
+	for (i; i < StringLen(); i++)
+	{
+		if (m_data[i] >= 97 && m_data[i] <= 132)
+		{
+			char c = m_data[i];
+			c -= 32;
+			m_data[i] = c;
+		}
+	}
+	return MyString(m_data);
 }
 
-int MyString::ToLower(int low)
+MyString MyString::ToLower()
 {
-	return 0;
+
+	int i = 0;
+	for (i; i < StringLen(); i++)
+	{
+		if (m_data[i] >= 65 && m_data[i] <= 90)
+		{
+			char c = m_data[i];
+			c += 32;
+			m_data[i] = c;
+		}
+	}
+	return m_data;
 }
